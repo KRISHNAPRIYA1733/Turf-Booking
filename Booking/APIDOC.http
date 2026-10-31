@@ -1,0 +1,50 @@
+###
+GET http://127.0.0.1:8000/turf/
+Accept: application/json
+
+###
+POST http://127.0.0.1:8000/turf/
+Content-Type: application/json
+
+{
+    "turf_name": "Green Arena",
+    "location": "Kakkanad, Kochi",
+    "sport_type": "Football",
+    "price_per_hour": 1200
+}
+
+###
+GET  http://127.0.0.1:8000/turfs/2/
+Accept: application/json
+
+###
+PUT  http://127.0.0.1:8000/turfs/1/
+Content-Type: application/json
+
+{
+    "turf_name": "Green Arena",
+    "location": "Kakkanad, Kochi",
+    "sport_type": "Football",
+    "price_per_hour": 1250,
+    "is_available": true
+
+}
+
+###
+DELETE  http://127.0.0.1:8000/turfs/1/
+
+###
+GET  http://127.0.0.1:8000/booking/
+Accept: application/json
+
+###
+POST  http://127.0.0.1:8000/booking/
+Content-Type: application/json
+
+{
+    "turf": 2,
+    "customer_name": "Praveen",
+    "booking_date": "2026-11-01",
+    "time_slot": "12:00:00"
+  
+}
